@@ -39,7 +39,7 @@ define $(PKG)_BUILD
         --with-gnu-ld \
         --with-gnu-as \
         --disable-nls \
-        --disable-shared \
+        --enable-shared \
         --disable-sjlj-exceptions \
         --without-x \
         --disable-win32-registry \
