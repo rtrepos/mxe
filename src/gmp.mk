@@ -25,7 +25,8 @@ define $(PKG)_BUILD
         --prefix='$(PREFIX)/$(TARGET)' \
         --disable-shared \
         --enable-cxx \
-        --without-readline
+        --without-readline \
+	LDFLAGS='-shared-libgcc'
     $(MAKE) -C '$(1)' -j '$(JOBS)'
     $(MAKE) -C '$(1)' -j 1 install
 endef
